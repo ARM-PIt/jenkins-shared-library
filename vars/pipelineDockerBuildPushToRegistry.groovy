@@ -11,6 +11,7 @@ def call(Map pipelineDockerBuildPushToRegistry) {
       GIT_URL = "${pipelineDockerBuildPushToRegistry.project_git_url}"
       GIT_BRANCH =  "${pipelineDockerBuildPushToRegistry.project_git_branch}"
       GIT_CHECKOUT_DIR = "${pipelineDockerBuildPushToRegistry.image_name}"
+      DOCKER_DIGEST = "${pipelineDockerBuildPushToRegistry.docker_digest}"
     }
     stages {
       stage('Clear Workspace') {
